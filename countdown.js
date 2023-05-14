@@ -2,7 +2,7 @@
 # MIT License
 #
 # Copyright (c) 2018 Praveen Lobo (praveenlobo.com)
-# 2023 warut92 add thai word
+# Copyright (c) 2023 warut92 add thai words
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to deal
@@ -76,9 +76,9 @@ CountDown.prototype.formatTime=function(){
 CountDown.prototype.updateCounter=function(){
     this.calculate();
     this.formatTime();
-    this.countainer.innerHTML ="<strong>" + this.years + "</strong> <small>" + (this.years == 1? "ปี" : "ปี") + "</small>" +
-       " <strong>" + this.months + "</strong> <small>" + (this.months == 1? "เดือน" : "เดือน") + "</small>" +
-       " <strong>" + this.days + "</strong> <small>" + (this.days == 1? "วัน" : "วัน") + "</small>"
+    this.countainer.innerHTML = (this.years == 0? "" : this.years + "ปี") +
+       " <strong>" + this.months + "</strong> <small>" + "เดือน" + "</small>" +
+       " <strong>" + this.days + "</strong> <small>" + "วัน" + "</small>";
     if ( this.endDate > (new Date()) ) {
         var self = this;
         setTimeout(function(){self.updateCounter();}, 1000);

@@ -78,7 +78,7 @@ CountDown.prototype.updateCounter=function(){
     this.formatTime();
     this.countainer.innerHTML ="<strong>" + this.years + "</strong> <small>" + (this.years == 1? "ปี" : "ปี") + "</small>" +
        " <strong>" + this.months + "</strong> <small>" + (this.months == 1? "เดือน" : "เดือน") + "</small>" +
-       " <strong>" + this.days + "</strong> <small>" + (this.days == 1? "วัน" : "วัน") + "</small>" +
+       " <strong>" + this.days + "</strong> <small>" + (this.days == 1? "วัน" : "วัน") + "</small>"
     if ( this.endDate > (new Date()) ) {
         var self = this;
         setTimeout(function(){self.updateCounter();}, 1000);
